@@ -1,4 +1,4 @@
-package com.exercise.proxy;
+package com.exercise.proxy.statics;
 
 /**
  * @ClassName UserProxy

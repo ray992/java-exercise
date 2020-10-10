@@ -6,7 +6,7 @@ import java.util.ListIterator;
 
 /**
  * @ClassName ArrayListDemo
- * @Description TODO
+ * @Description ArrayList 遍历测试
  * @Author yeqiang
  * @Date 2020/10/9 8:54 上午
  * @Version 1.0

@@ -1,4 +1,4 @@
-package com.exercise.proxy.jdk;
+package com.exercise.proxy;
 
 public interface Star {
 

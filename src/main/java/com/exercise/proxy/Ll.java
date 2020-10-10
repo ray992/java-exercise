@@ -1,4 +1,6 @@
-package com.exercise.proxy.jdk;
+package com.exercise.proxy;
+
+import com.exercise.proxy.Star;
 
 /**
  * @ClassName Ll
@@ -9,6 +11,9 @@ package com.exercise.proxy.jdk;
  **/
 public class Ll implements Star {
 
+    public final void info(){
+        System.out.println("info");
+    }
 
     @Override
     public void sing(String name) {

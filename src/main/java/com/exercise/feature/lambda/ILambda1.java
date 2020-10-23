@@ -7,5 +7,8 @@ package com.exercise.feature.lambda;
  * @Date 2020/10/22 3:47 下午
  * @Version 1.0
  **/
-public class ILambda1 {
+@FunctionalInterface
+public interface ILambda1 {
+
+    void test();
 }

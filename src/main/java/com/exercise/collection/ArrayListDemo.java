@@ -14,8 +14,8 @@ import java.util.ListIterator;
 public class ArrayListDemo {
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 100000; i ++){
+        ArrayList<Integer> list = new ArrayList<>();
+       /* for (int i = 0; i < 100000; i ++){
             list.add(i);
         }
         randomAccess(list);
@@ -31,7 +31,20 @@ public class ArrayListDemo {
         String[] array2= new String[stringList.size()];
         stringList.toArray(array2);
         System.out.println(array.length);
-        System.out.println(array2.length);
+        System.out.println(array2.length);*/
+        list.add(1);
+        list.add(2);
+        System.out.println(list.toString());
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(2);
+        list2.add(3);
+        list.addAll(list2);
+        System.out.println(list.size());
+        System.out.println(list.toString());
+        for (Integer integer:list){
+            System.out.println(integer);
+        }
+        list.trimToSize();
     }
 
     /**

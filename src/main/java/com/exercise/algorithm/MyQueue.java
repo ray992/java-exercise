@@ -1,5 +1,7 @@
 package com.exercise.algorithm;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -11,8 +13,7 @@ import java.util.Stack;
  **/
 public class MyQueue {
 
-    private Stack<Integer> s1 = new Stack<>();
-    private Stack<Integer> s2 = new Stack<>();
+    private Deque<Integer> s1 = new LinkedList<>();
 
     /** Initialize your data structure here. */
     public MyQueue() {
@@ -21,60 +22,22 @@ public class MyQueue {
 
     /** Push element x to the back of queue. */
     public void push(int x) {
-        if (s1.empty() && s2.empty()){
-            s1.push(x);
-        }
-        if (!s1.empty() && s2.empty()){
-            s1.push(x);
-        }
-        if (s1.empty() && !s2.empty()){
-            s2.push(x);
-        }
+        s1.addLast(x);
     }
 
     /** Removes the element from in front of queue and returns that element. */
     public int pop() {
-        Integer x = null;
-        if (!s1.empty()){
-            while (!s1.empty()){
-                s2.push(s1.pop());
-            }
-            x = s2.pop();
-        }
-        if (!s2.empty()){
-            while (!s2.empty()){
-                s1.push(s2.pop());
-            }
-            x = s1.pop();
-        }
-        return x;
+        return s1.pollFirst();
     }
 
     /** Get the front element. */
     public int peek() {
-        Integer front = null;
-        if (!s1.empty()){
-            while (!s1.empty()){
-                front = s1.pop();
-                s2.push(front);
-            }
-        }else if (!s1.empty()){
-            while (!s2.empty()){
-                front = s2.pop();
-                s1.push(front);
-            }
-        }else {
-            return front;
-        }
-        return front;
+        return s1.peekFirst();
     }
 
     /** Returns whether the queue is empty. */
     public boolean empty() {
-        if (s1.empty() && s2.empty()){
-            return true;
-        }
-        return false;
+        return s1.isEmpty();
     }
 
     public static void main(String[] args) {

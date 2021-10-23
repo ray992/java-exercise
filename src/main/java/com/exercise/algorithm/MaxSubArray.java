@@ -44,11 +44,26 @@ public class MaxSubArray {
         return max;
     }
 
+    public int maxSubArray2(int[] nums) {
+        int maxSum = nums[0];
+        int curSum = nums[0];
+        for (int i = 1; i < nums.length; i++ ){
+            if (curSum < 0){
+                curSum = nums[i];
+            }else {
+                curSum = curSum + nums[i];
+            }
+            if (maxSum < curSum){
+                maxSum = curSum;
+            }
+        }
+        return Math.max(maxSum, curSum);
+    }
+
     public static void main(String[] args) {
         MaxSubArray maxSubArray = new MaxSubArray();
-        System.out.println(maxSubArray.maxSubArray(new int[]{-1,-2}));
-        System.out.println(maxSubArray.maxSubArray(new int[]{-2,1}));
-        System.out.println(maxSubArray.maxSubArray(new int[]{1}));
-        System.out.println(maxSubArray.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        //System.out.println(maxSubArray.maxSubArray2(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        //System.out.println(maxSubArray.maxSubArray2(new int[]{1}));
+        System.out.println(maxSubArray.maxSubArray2(new int[]{-1, -2}));
     }
 }

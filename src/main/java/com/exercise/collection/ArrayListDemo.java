@@ -13,6 +13,8 @@ import java.util.ListIterator;
  **/
 public class ArrayListDemo {
 
+    //底层数组， 每次扩容都是原来容量的1。5倍
+
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
        /* for (int i = 0; i < 100000; i ++){

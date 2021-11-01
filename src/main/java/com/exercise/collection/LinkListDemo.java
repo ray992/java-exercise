@@ -20,5 +20,7 @@ public class LinkListDemo {
         for (String s:linkedList){
             System.out.println(s);
         }
+        System.out.println(linkedList.getFirst()); //获取第一个元素
+        System.out.println(linkedList.getLast());; //获取最后一个元素
     }
 }

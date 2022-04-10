@@ -7,7 +7,7 @@ import com.exercise.mapStruct.UserWalletDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
-@Mapper
+//@Mapper
 public interface UserComplexMapper {
 
     UserVO userInfoAndWalletToUserVO(UserDTO userDTO, UserWalletDTO userWalletDTO);

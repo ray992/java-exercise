@@ -1,6 +1,7 @@
 package com.exercise.algorithm.day;
 
 import com.exercise.algorithm.listNode.ListNode;
+import com.exercise.algorithm.tree.TreeNode;
 
 /**
  * @ClassName DeleteNode
@@ -15,4 +16,5 @@ public class DeleteNode {
         node.val = node.next.val;
         node.next = node.next.next;
     }
+
 }

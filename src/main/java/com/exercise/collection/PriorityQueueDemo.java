@@ -7,7 +7,7 @@ import java.util.Random;
 
 /**
  * @ClassName PriorityQueueDemo
- * @Description TODO
+ * @Description 优先级队列
  * @Author yeqiang
  * @Date 2021/8/1 上午10:16
  * @Version 1.0

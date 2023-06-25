@@ -1,5 +1,7 @@
 package com.exercise.concurrent;
 
+import com.alibaba.ttl.TransmittableThreadLocal;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -11,9 +13,9 @@ import java.util.concurrent.TimeUnit;
  * @Date 2021/10/26 下午6:22
  * @Version 1.0
  **/
-public class InheritableThreadLocalDemo {
+public class TransmittableThreadLocalDemo {
 
-    private static InheritableThreadLocal<Integer> integerInheritableThreadLocal = new InheritableThreadLocal<>();
+    private static TransmittableThreadLocal<Integer> integerInheritableThreadLocal = new TransmittableThreadLocal<>();
 
     private static ExecutorService executorService = Executors.newFixedThreadPool(2);
 
@@ -47,6 +49,5 @@ public class InheritableThreadLocalDemo {
                 }
             }
         });
-        System.out.println("===");
     }
 }

@@ -1,6 +1,7 @@
 package com.exercise.collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -47,6 +48,19 @@ public class ArrayListDemo {
             System.out.println(integer);
         }
         list.trimToSize();
+
+        List<String> chainList = new ArrayList<>();
+        chainList.add("abc");
+        chainList.add("efg");
+        chainList.add("efg");
+        System.out.println(chainList.toString().replaceAll(" ", ""));
+        System.out.println(Arrays.toString(chainList.toArray()));
+        //[abc,efg, efg]
+
+        String[] ss = new String[3];
+        Arrays.fill(ss, "1");
+        System.out.println(Arrays.toString(ss));
+        System.out.println(Arrays.toString(ss).replaceAll(" ", ""));
     }
 
     /**

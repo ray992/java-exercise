@@ -1,6 +1,7 @@
 package com.exercise.bigdecimal;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * @ClassName BigDecimalDemo
@@ -12,30 +13,15 @@ import java.math.BigDecimal;
 public class BigDecimalDemo {
 
     public static void main(String[] args) {
-        BigDecimal bigDecimal = new BigDecimal("5.2");
-        BigDecimal bigDecimal1 = BigDecimal.valueOf(2.1);
-        System.out.println(bigDecimal);
-        System.out.println(bigDecimal1);
-        BigDecimal add = bigDecimal.add(bigDecimal1);
-        System.out.println(add);
-        BigDecimal subtract = bigDecimal.subtract(bigDecimal1);
-        System.out.println(subtract);
-        BigDecimal multiply = bigDecimal.multiply(bigDecimal1);
-        System.out.println(multiply);
+        BigDecimal bigDecimal = new BigDecimal ("2.4761");
         //2.476190476190476
-        BigDecimal divide = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_CEILING); //向正舍入， 2.4762
-        System.out.println(divide);
-        BigDecimal divide1 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_DOWN); //向零舍入, 2.4761
-        System.out.println(divide1);
-        BigDecimal divide2 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_FLOOR); //向零舍入, 2.4761
-        System.out.println(divide2);
-        BigDecimal divide3 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_HALF_DOWN); //按距离舍入
-        System.out.println(divide3);
-        BigDecimal divide4 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_HALF_UP); //按距离舍入
-        System.out.println(divide4);
-        BigDecimal divide5 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_HALF_EVEN); //按距离舍入
-        System.out.println(divide5);
-        BigDecimal divide6 = bigDecimal.divide(bigDecimal1,4, BigDecimal.ROUND_UP); //按距离舍入
-        System.out.println(divide6);
+        System.out.println(bigDecimal.setScale(4, RoundingMode.UP)); //正数向右靠， 负数向左靠
+        System.out.println(bigDecimal.setScale(4, RoundingMode.DOWN));//正数向左靠， 负数向右靠
+        System.out.println(bigDecimal.setScale(4, RoundingMode.CEILING)); // 全向右靠，向大靠拢
+        System.out.println(bigDecimal.setScale(4, RoundingMode.FLOOR)); // 全向左靠，向小靠拢
+        System.out.println(bigDecimal.setScale(4, RoundingMode.HALF_UP)); // 舍弃距离相同，向上舍入， 如果舍弃部分大于等于0.5， 则向上，否则向下
+        System.out.println(bigDecimal.setScale(4, RoundingMode.HALF_DOWN)); // 舍弃距离相同，向下舍入， 如果舍弃部分大于等于0.5， 则向上，否则向下
+        System.out.println(bigDecimal.setScale(4, RoundingMode.HALF_EVEN));
+        System.out.println(bigDecimal.setScale(4, RoundingMode.UNNECESSARY));
     }
 }

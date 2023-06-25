@@ -1,5 +1,7 @@
 package com.exercise.algorithm.day;
 
+import java.util.Arrays;
+
 /**
  * @ClassName FinalPrices
  * @Description TODO
@@ -15,7 +17,7 @@ public class FinalPrices {
             int currentPrice = prices[i];
             int discount = 0;
             for (int j = i+1; j < prices.length; j++){
-                if (prices[j] < currentPrice){
+                if (prices[j] <= currentPrice){
                     discount = prices[j];
                     break;
                 }
@@ -26,12 +28,10 @@ public class FinalPrices {
     }
 
     public static void main(String[] args) {
-        //int[] prices = {8,4,6,2,3};
-        int[] prices = {1,2,3,4,5};
+        int[] prices = {8,4,6,2,3};
+        //int[] prices = {1,2,3,4,5};
         FinalPrices finalPrices = new FinalPrices();
         int[] result = finalPrices.finalPrices(prices);
-        for (int price:result){
-            System.out.println(price);
-        }
+        System.out.println(Arrays.toString(result));
     }
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @ClassName ReverseList
- * @Description TODO
+ * @Description 反转链表
  * @Author yeqiang
  * @Date 2021/8/2 下午11:30
  * @Version 1.0

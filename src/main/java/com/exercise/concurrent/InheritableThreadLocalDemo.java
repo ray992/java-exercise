@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  **/
 public class InheritableThreadLocalDemo {
 
-    private static InheritableThreadLocal<Integer> integerInheritableThreadLocal = new InheritableThreadLocal<>();
+    private static final InheritableThreadLocal<Integer> integerInheritableThreadLocal = new InheritableThreadLocal<>();
 
     private static ExecutorService executorService = Executors.newFixedThreadPool(2);
 

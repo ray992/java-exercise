@@ -81,8 +81,8 @@ public class IdWorker {
 
     public static void main(String[] args) throws Exception {
         IdWorker idWorker = new IdWorker(1);
-        for (int i = 0; i < 10000; i++){
-            System.out.println(idWorker.nextId());
+        for (int i = 0; i < 1; i++){
+            System.out.println(String.valueOf(idWorker.nextId()).length());
         }
     }
 }
